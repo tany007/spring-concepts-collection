@@ -1,0 +1,23 @@
+spring:
+    application:
+        name: resilience4j-ratelimiter
+
+resilience4j:
+    ratelimiter:
+      configs:
+        default:
+          limit-for-period: 10
+          limit-refresh-period: 1s
+          timeout-duration: 100ms
+          limit-for-call: 5
+        backendAConfig:
+          limit-for-period: 5
+          limit-refresh-period: 1s
+          timeout-duration: 100ms
+      instances:
+        backendA:
+          base-config: backendAConfig
+        backendB:
+          limit-for-period: 10
+          limit-refresh-period: 1s
+          timeout-duration: 100ms
