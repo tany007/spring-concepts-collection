@@ -31,5 +31,5 @@ List<Customer> fetchCustomersWithAddress();
 This also retrieves all customers and their addresses in one query.
 
 ## Summary
-Both @EntityGraph and custom JPQL with JOIN FETCH are effective solutions to the N+1 problem in Spring Data JPA. 
+Both `@EntityGraph` and custom JPQL with JOIN FETCH are effective solutions to the N+1 problem in Spring Data JPA. 
 Use them to optimize your data access and improve application performance.
